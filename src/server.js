@@ -1,9 +1,13 @@
-const express = require('express'); //Import su dung thu vien cua express
+import express from 'express'; //Su dung thu vien cua express
+import configViewEngine from './configs/viewEngine'; //Su dung cau hinh 
+
 const app = express(); //Khai bao mot istance
 const post = 3000; //Khai bao mot cong
 
+configViewEngine(app);
+
 app.get('/', (req, res) => {
-    res.send('Hello world voi express')
+    res.render('index.ejs')
 })
 
 app.get('/about', (req, res) => {

@@ -1,0 +1,6 @@
+{
+    // Cau hinh bat cai dat babel trong file pakage.json
+    "presets": [
+        "@babel/preset-env"
+    ]
+}
