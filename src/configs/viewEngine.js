@@ -4,7 +4,8 @@ import express from "express";
 // Khai bao mot bien app dai dien cho ung dung
 
 const configViewEngine = (app) => {
-    // app.use(express.static('./src/public'))
+    // Khai bao/ cap quyen su dung cac tai nguyen static
+    app.use(express.static('./src/public'))
 
     // Cấu hình sử dụng templeate view sư dụng gi
     app.set("view engine", "ejs");
