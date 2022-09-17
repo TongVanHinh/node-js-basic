@@ -1,13 +1,15 @@
-const http = require('http');
+const express = require('express'); //Import su dung thu vien cua express
+const app = express(); //Khai bao mot istance
+const post = 3000; //Khai bao mot cong
 
-const server = http.createServer((req, res) => {
-    console.log('run request ...')
-    res.setHeader('Content-Type', 'text/html');
-    res.write('<h3>Hello world! </h3>');
-    res.write('<h2>from ERIC & HOI DAN IT </h2>');
-    res.end();
+app.get('/', (req, res) => {
+    res.send('Hello world voi express')
 })
 
-server.listen(3000, 'localhost', () => {
-    console.log('Node.JS server is running on port: 3000');
+app.get('/about', (req, res) => {
+    res.send('Toi la Hinh day')
+})
+
+app.listen(post, () => {
+    console.log(`Example app listening at http://localhost:${post}`);
 })
