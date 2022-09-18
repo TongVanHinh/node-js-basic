@@ -2,6 +2,7 @@ import express from 'express'; //Su dung thu vien cua express
 import configViewEngine from './configs/viewEngine'; //Su dung cau hinh 
 require('dotenv').config(); //Import thu vien bien moi trongdotenv
 import initWebRoute from './route/web'; //Khai bao Route
+import initAPIRoute from './route/api';
 import connection from './configs/connectDB';
 
 const app = express(); //Khai bao mot istance
@@ -17,6 +18,8 @@ configViewEngine(app);
 
 // init web route
 initWebRoute(app);
+// init api route
+initAPIRoute(app);
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
