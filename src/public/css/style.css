@@ -61,3 +61,17 @@ table {
     background-color: blue;
     cursor: pointer;
   }
+
+
+  .upload-file-container{
+      padding: 15px;
+  }
+
+  .upload-file-container label{
+    display: block;
+  }
+
+  .btn-save-file{
+    margin-top: 15px;
+    cursor: pointer;
+  }
